@@ -1,17 +1,23 @@
 package com.test.taobao;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTabHost;
 import androidx.viewpager.widget.ViewPager;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TabHost;
+import android.widget.TabWidget;
+import android.widget.TextView;
 
 import com.test.taobao.activity.Fragment1;
 import com.test.taobao.activity.Fragment2;
+import com.test.taobao.adapter.MyFragmentAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,8 +64,7 @@ public class MainActivity extends FragmentActivity implements
         /*新建Tabspec选项卡并设置Tab菜单栏的内容和绑定对应的Fragment*/
         for (int i = 0; i < count; i++) {
             // 给每个Tab按钮设置标签、图标和文字
-            TabHost.TabSpec tabSpec = mTabHost.newTabSpec(textViewArray[i])
-                    .setIndicator(getTabItemView(i));
+            TabHost.TabSpec tabSpec = mTabHost.newTabSpec(textViewArray[i]).setIndicator(getTabItemView(i));
             // 将Tab按钮添加进Tab选项卡中，并绑定Fragment
             mTabHost.addTab(tabSpec, fragmentArray[i], null);
             mTabHost.setTag(i);
