@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.test.taobao.R;
 import com.test.taobao.adapter.RecyclerGridAdapter;
 import com.test.taobao.bean.GoodsInfo;
+import com.test.taobao.widget.SpacesItemDecoration;
 
 public class Fragment1 extends BaseFragment  {
     private final static String TAG = "Fragment1";
