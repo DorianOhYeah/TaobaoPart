@@ -76,6 +76,7 @@ public class MainActivity extends FragmentActivity implements
         list.add(fragment1);
         list.add(fragment2);
 
+
         //绑定Fragment适配器
         vp.setAdapter(new MyFragmentAdapter(getSupportFragmentManager(), list));
         mTabHost.getTabWidget().setDividerDrawable(null);
